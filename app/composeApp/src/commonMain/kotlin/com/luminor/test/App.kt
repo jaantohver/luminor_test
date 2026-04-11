@@ -50,7 +50,7 @@ fun App(
                 LoginScreen(
                     onLogin = { email, password ->
                         if (!isValidEmail(email)) {
-                            showToast("Is that even an email? Needs an '@' buddy! 😉")
+                            showToast("Invalid email format")
                             "Invalid email format"
                         } else if (userManager == null || userManager.loginUser(email, password)) {
                             userEmail = email
@@ -73,7 +73,7 @@ fun App(
                 RegisterScreen(
                     onRegister = { email, password ->
                         if (!isValidEmail(email)) {
-                            showToast("Trying to register without an '@'? Nice try! 😂")
+                            showToast("Invalid email format")
                             "Invalid email format"
                         } else if (email.isEmpty() || password.isEmpty()) {
                             "Fields cannot be empty"
@@ -356,6 +356,19 @@ fun RegisterScreen(
             )
         ) {
             Text("Register", fontWeight = FontWeight.Bold)
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        TextButton(
+            onClick = onNavigateToLogin,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text(
+                "Already have an account? Log in",
+                color = Color.Gray,
+                fontSize = 14.sp
+            )
         }
     }
 }
