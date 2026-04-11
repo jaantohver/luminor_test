@@ -1,0 +1,40 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="100dp"
+    android:height="100dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+    <!-- Gradient background -->
+    <path
+        android:pathData="M0,0h100v100h-100z">
+        <aapt:attr name="android:fillColor">
+            <gradient
+                android:startX="0"
+                android:startY="0"
+                android:endX="100"
+                android:endY="100"
+                android:type="linear">
+                <item android:offset="0" android:color="#FF80DEEA" />
+                <item android:offset="0.5" android:color="#FFCE93D8" />
+                <item android:offset="1" android:color="#FFF48FB1" />
+            </gradient>
+        </aapt:attr>
+    </path>
+
+    <!-- Mascot Head: Perfect Semi-circle -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M20,60 A30,30 0 0 1 80,60 Z" />
+
+    <!-- Antennas: Symmetric and attached to head -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:pathData="M35,34 L25,15 M65,34 L75,15" />
+
+    <!-- Eyes -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M40,48 A3,3 0 1 1 40,48.1 Z M60,48 A3,3 0 1 1 60,48.1 Z" />
+</vector>
