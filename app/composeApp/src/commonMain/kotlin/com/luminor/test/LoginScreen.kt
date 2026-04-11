@@ -55,9 +55,3 @@ fun HomeScreen(
         }
     }
 }
-
-@Preview
-@Composable
-fun HomeScreenPreview() {
-    HomeScreen(email = "aleks@gmail.com", onLogout = {})
-}

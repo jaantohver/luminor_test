@@ -11,7 +11,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.PasswordVisualTransformation
@@ -21,7 +20,7 @@ import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
 
 import test.composeapp.generated.resources.Res
-import test.composeapp.generated.resources.android_mascot
+import test.composeapp.generated.resources.ic_launcher
 
 enum class Screen {
     LOGIN, REGISTER, HOME
@@ -132,7 +131,7 @@ fun LoginScreen(
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(Res.drawable.android_mascot),
+                painter = painterResource(Res.drawable.ic_launcher),
                 contentDescription = "Logo",
                 modifier = Modifier.fillMaxSize()
             )
@@ -280,7 +279,7 @@ fun RegisterScreen(
             contentAlignment = Alignment.Center
         ) {
             Image(
-                painter = painterResource(Res.drawable.android_mascot),
+                painter = painterResource(Res.drawable.ic_launcher),
                 contentDescription = "Logo",
                 modifier = Modifier.fillMaxSize()
             )
