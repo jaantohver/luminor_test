@@ -42,7 +42,7 @@ fun App(
         var userEmail by remember { mutableStateOf("") }
 
         val userManager = remember {
-            settings?.let { Networking(it) }
+            settings?.let { UserManager(it) }
         }
 
         when (currentScreen) {
@@ -52,7 +52,7 @@ fun App(
                         if (!isValidEmail(email)) {
                             showToast("Invalid email format")
                             "Invalid email format"
-                        } else if (userManager == null || userManager.loginUser(email, password)) {
+                        } else if (userManager != null && userManager.loginUser(email, password)) {
                             userEmail = email
                             if (onLoginSuccess != null) {
                                 onLoginSuccess(email)
